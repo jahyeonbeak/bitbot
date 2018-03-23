@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95d9c2e8-6817-48d3-8cd0-c5d06ef4d780" name="默认的" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/bitbot.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/forms.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/migrations/0001_initial.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/static/stylesheets/login.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/templates/account/dashboard.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/templates/account/register.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/templates/account/register_done.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/templates/account/social_total_count.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/templates/base.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/templates/registration/logged_out.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/templates/registration/login.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/templates/registration/password_change_done.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/templates/registration/password_change_form.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/templates/registration/password_reset_complete.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/templates/registration/password_reset_confirm.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/templates/registration/password_reset_done.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/templates/registration/password_reset_email.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/templates/registration/password_reset_form.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/arbitrage/urls.py" />
-      <change beforePath="$PROJECT_DIR$/arbitrage/models.py" afterPath="$PROJECT_DIR$/arbitrage/models.py" />
-      <change beforePath="$PROJECT_DIR$/arbitrage/views.py" afterPath="$PROJECT_DIR$/arbitrage/views.py" />
       <change beforePath="$PROJECT_DIR$/bitbot/settings.py" afterPath="$PROJECT_DIR$/bitbot/settings.py" />
-      <change beforePath="$PROJECT_DIR$/bitbot/urls.py" afterPath="$PROJECT_DIR$/bitbot/urls.py" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,11 +18,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bitbot/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1068">
-                  <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+                <state relative-caret-position="224">
+                  <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -97,7 +70,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../django_social_login_tutorial-master/account/forms.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="323">
@@ -253,9 +226,9 @@
         <option value="$PROJECT_DIR$/arbitrage/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/bitbot/urls.py" />
         <option value="$PROJECT_DIR$/arbitrage/views.py" />
-        <option value="$PROJECT_DIR$/bitbot/settings.py" />
         <option value="$PROJECT_DIR$/../django_social_login_tutorial-master/account/forms.py" />
         <option value="$PROJECT_DIR$/arbitrage/models.py" />
+        <option value="$PROJECT_DIR$/bitbot/settings.py" />
       </list>
     </option>
   </component>
@@ -403,13 +376,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27094668" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22633298" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22633298" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16684435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -654,14 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitbot/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1068">
-          <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../django_social_login_tutorial-master/account/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -727,6 +693,14 @@
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitbot/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
