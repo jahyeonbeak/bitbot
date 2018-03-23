@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
 from django.views import View
@@ -13,47 +14,34 @@ from libs.api_manager import *
 class Login(View):
     def get(self, request):
         print(request.method)
-        return render(request, 'index.html')
+        return render(request, 'trade/index.html')
 
     def post(self, request):
         print(request.method)
-        return render(request, 'index.html')
+        return render(request, 'trade/index.html')
 
 class MainPage(View):
     def get(self, request):
         print(request.method)
         #return HttpResponse("Ture")
-        return render(request, 'index.html')
+        return render(request, 'trade/index.html')
 
     def post(self, request):
         print(request.method)
         #return HttpResponse("False")
-        return render(request, 'index.html')
+        return render(request, 'trade/index.html')
 
-def index(request):
-    # request.POST
-    # request.GET
-    bithumb_api=EasyAPI('','')
-    res = bithumb_api.get_ticker('ALL')
-    if res['status'] == '0000':
-        print (res['data']['BTC']['buy_price'])
-    test = ApiManager()
-    testaaa = test.GetBithumbApi().get_account()
-    print (testaaa)
-    return HttpResponse("Ture")
-    return render(request, "index.html",)
-
-#@api_view(['POST', 'GET'])
-def aaaa(request, *args):
-    if request.method == 'GET':
-        pass
-    elif request.method == 'POST':
-        pass
-
+@login_required #登录限制标识
 def dashboard(request):
     return render(request,
                   'account/dashboard.html',
                   {'section': 'dashboard'})
+
+@login_required
+def mainpage(request):
+    return render(request,
+                  'trade/arbitrage_trade.html',
+                  )
 
 def register(request):
     if request.method == 'POST':
@@ -75,5 +63,11 @@ def register(request):
                   'account/register.html',
                   {'user_form': user_form})
 
-def login(request):
-    return HttpResponse("Ture")
+def comments_upload(request):
+    print("fff")
+    if request.method == 'POST':
+
+
+        return HttpResponse("表单测试成功")  # 最后返会给前端的数据，如果能在前端弹出框中显示我们就成功了
+    else:
+        return HttpResponse("<h1>test</h1>")

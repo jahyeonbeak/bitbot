@@ -12,6 +12,7 @@ from . import views
 
 urlpatterns = [
 
+    url(r'^comments_upload/$', views.comments_upload, name='comments_upload'),
     url(r'^$', views.dashboard, name='dashboard'),
     url(r'^register/$', views.register, name='register'),
 
@@ -38,4 +39,8 @@ urlpatterns = [
     url(r'^password-reset/complete/$',
         password_reset_complete,
         name='password_reset_complete'),
+
+    # test
+    url(r'^test/$', views.mainpage, name='test'),
+
 ]
