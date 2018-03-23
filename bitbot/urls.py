@@ -1,3 +1,14 @@
+from django.conf.urls import url, include
+from django.contrib.auth.views import login
+from django.contrib.auth.views import logout
+from django.contrib.auth.views import logout_then_login
+from django.contrib.auth.views import password_change
+from django.contrib.auth.views import password_change_done
+from django.contrib.auth.views import password_reset
+from django.contrib.auth.views import password_reset_complete
+from django.contrib.auth.views import password_reset_confirm
+from django.contrib.auth.views import password_reset_done
+
 """bitbot URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -15,11 +26,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from arbitrage import views
+from arbitrage import urls
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
-    path(r'', views.index, name='indexpage'),
-    path(r'index/', views.Login.as_view(), name='indexpage'),
-    path(r'main/', views.MainPage.as_view(), name='mainpage'),
+    path('admin/', admin.site.urls),
+    #path(r'', views.index, name='indexpage'),
+    #path(r'index/', views.Login.as_view(), name='indexpage'),
+    #path(r'main/', views.MainPage.as_view(), name='mainpage'),
+    url(r'', include('arbitrage.urls')),
+    #url(r'^$', views.dashboard, name='dashboard'),
+    #url(r'^register/$', views.register, name='register'),
+
 ]
