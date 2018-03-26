@@ -10,10 +10,16 @@
                     $.ajax({
                         type:"POST",
                         data: {},
-                        url: "{% url 'comments_upload' %}", //后台处理函数的url 这里用的是static url 需要与urls.py中的name一致
+                        url: "{% url 'interface_test' %}", //后台处理函数的url 这里用的是static url 需要与urls.py中的name一致
                         cache: false,
                         dataType: "html",
                         success: function(result, statues, xml){
+                            var newcomment = "<li class=\"contents\">" +
+                                      "<div class=\"result\">"+result+"</div>"+
+                                  "</li>"
+
+                            $(".con").append(newcomment);
+
                             alert(result);                                         //成功时弹出view传回来的结果
                         },
                         error: function(){
@@ -33,4 +39,6 @@
         <button type="submit" id="submit" >提交</button>
         </form>
     </div>
+    <div id = "comm">
+        <ul class = 'con' >测试结果</ul> </div>
 {% endblock %}

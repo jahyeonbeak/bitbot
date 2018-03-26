@@ -12,7 +12,6 @@ from . import views
 
 urlpatterns = [
 
-    url(r'^comments_upload/$', views.comments_upload, name='comments_upload'),
     url(r'^$', views.dashboard, name='dashboard'),
     url(r'^register/$', views.register, name='register'),
 
@@ -42,5 +41,6 @@ urlpatterns = [
 
     # test
     url(r'^test/$', views.mainpage, name='test'),
+    url(r'interface_test/$', views.interface_test, name='interface_test'),
 
 ]
