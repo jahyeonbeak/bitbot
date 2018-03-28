@@ -6,7 +6,7 @@ import sys,os
 sys.path.append(os.path.join(os.path.dirname(__file__), '../../BitcoinMonitor/scripts/api').replace('\\', '/'))
 from bithumb.easy_api import EasyAPI
 import json
-import config
+from . import config
 
 class ApiManager(object):
     '''
@@ -40,6 +40,11 @@ class ApiManager(object):
             print (e)
             #logger.error('Error: %s' % str(e))
             return "None"
+
+    def _get_trade_history(self):
+        pass
+
+
     def GetBithumbApi(self):
         return self.bithumb_api
     pass

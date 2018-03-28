@@ -5,6 +5,12 @@ from django.views import View
 from os import path
 import sys, os
 from .forms import UserRegistrationForm
+#包装csrf请求，避免django认为其实跨站攻击脚本
+from django.views.decorators.csrf import csrf_exempt
+from .models import *
+
+#数据库
+from .models import User
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '../../BitcoinMonitor/scripts/api').replace('\\', '/'))
 from libs.api_manager import *
@@ -60,11 +66,21 @@ def register(request):
                   {'user_form': user_form})
 
 
+@csrf_exempt
 def interface_test(request):
     if request.method == 'POST':
         # 最后返会给前端的数据，如果能在前端弹出框中显示我们就成功了
         p = ApiManager()
         a = p.query()
+        c = TestData.objects.all()
+
+
+        print(c)
+        player = TestData(lastname="aaaaaa")
+        player.firstname = 'ttttt'
+        player.save()
+        d = TestData.objects.all()
+        print(d)
         return HttpResponse(a)
     else:
         return HttpResponse("<h1>test</h1>")
