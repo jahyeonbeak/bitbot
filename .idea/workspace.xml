@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95d9c2e8-6817-48d3-8cd0-c5d06ef4d780" name="默认的" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/libs/config.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/arbitrage/templates/trade/arbitrage_trade.html" afterPath="$PROJECT_DIR$/arbitrage/templates/trade/arbitrage_trade.html" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change beforePath="$PROJECT_DIR$/libs/api_manager.py" afterPath="$PROJECT_DIR$/libs/api_manager.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,21 +30,31 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="arbitrage_trade.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="arbitrage_trade.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/arbitrage/templates/trade/arbitrage_trade.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="319">
-                  <caret line="49" column="7" lean-forward="false" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+                <state relative-caret-position="433">
+                  <caret line="55" column="10" lean-forward="true" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="api_manager.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="api_manager.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/libs/api_manager.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1007">
-                  <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+                <state relative-caret-position="281">
+                  <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="priceupdate.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../BitcoinMonitor/scripts/priceupdate.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
@@ -64,7 +74,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/arbitrage/views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="504">
@@ -72,6 +82,16 @@
                   <folding>
                     <element signature="e#0#57#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/libs/config.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="133">
+                  <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -91,6 +111,13 @@
         </leaf>
       </split-second>
     </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -119,9 +146,10 @@
         <option value="$PROJECT_DIR$/arbitrage/templates/trade/index.html" />
         <option value="$PROJECT_DIR$/arbitrage/urls.py" />
         <option value="$PROJECT_DIR$/arbitrage/views.py" />
-        <option value="$PROJECT_DIR$/libs/api_manager.py" />
         <option value="$PROJECT_DIR$/arbitrage/templates/base.html" />
         <option value="$PROJECT_DIR$/arbitrage/templates/trade/arbitrage_trade.html" />
+        <option value="$PROJECT_DIR$/libs/config.py" />
+        <option value="$PROJECT_DIR$/libs/api_manager.py" />
       </list>
     </option>
   </component>
@@ -167,17 +195,6 @@
               <item name="bitbot" type="b2602c69:ProjectViewProjectNode" />
               <item name="bitbot" type="462c0819:PsiDirectoryNode" />
               <item name="arbitrage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bitbot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bitbot" type="462c0819:PsiDirectoryNode" />
-              <item name="arbitrage" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bitbot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bitbot" type="462c0819:PsiDirectoryNode" />
-              <item name="bitbot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bitbot" type="b2602c69:ProjectViewProjectNode" />
@@ -311,30 +328,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/arbitrage/static/stylesheets/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/arbitrage/templates/trade/arbitrage_trade.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/arbitrage/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/api_manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -639,26 +632,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/api_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/arbitrage/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/arbitrage/templates/trade/arbitrage_trade.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="49" column="7" lean-forward="false" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -670,6 +647,46 @@
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BitcoinMonitor/scripts/settings/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arbitrage/templates/trade/arbitrage_trade.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="55" column="10" lean-forward="true" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BitcoinMonitor/scripts/priceupdate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/api_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

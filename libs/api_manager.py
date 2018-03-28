@@ -6,6 +6,7 @@ import sys,os
 sys.path.append(os.path.join(os.path.dirname(__file__), '../../BitcoinMonitor/scripts/api').replace('\\', '/'))
 from bithumb.easy_api import EasyAPI
 import json
+from . import config
 
 class ApiManager(object):
     '''
@@ -15,7 +16,7 @@ class ApiManager(object):
         #self._request_timeout = int(config.REQUEST_TIMEOUT)
         self._name = 'api_manager'
 
-        self.bithumb_api=EasyAPI('e10a77523a6951f37b20526a86e8bc74','b477aa50c9c46530dc310e5dd76708be');
+        self.bithumb_api=EasyAPI(config.BITHUMB_CONNECT_KEY,config.BITHUMB_SECRET_KEY);
         #self.okcoinSpot = OKCoinSpot(config.OKCOIN_RESTURL,'','')
 
     @property
