@@ -5,15 +5,14 @@ from django.views import View
 from os import path
 import sys, os
 from .forms import UserRegistrationForm
-#包装csrf请求，避免django认为其实跨站攻击脚本
+# 包装csrf请求，避免django认为其实跨站攻击脚本
 from django.views.decorators.csrf import csrf_exempt
 from .models import *
-
-#数据库
+# 数据库
 from .models import User
-
 sys.path.append(os.path.join(os.path.dirname(__file__), '../../BitcoinMonitor/scripts/api').replace('\\', '/'))
 from libs.api_manager import *
+from libs.db_helper import *
 
 
 # Create your views here.
@@ -70,27 +69,40 @@ def register(request):
 def interface_test(request):
     if request.method == 'POST':
         # 最后返会给前端的数据，如果能在前端弹出框中显示我们就成功了
-        p = ApiManager()
-        a = p.query()
-        c = TestData.objects.all()
+        #p = ApiManager()
+        #a = p.query()
 
+        # account_balance(request)
+        # trade_history(request)
 
-        print(c)
-        #player = TestData(lastname="aaaaaa")
-        #player.firstname = 'ttttt'
-        #player.save()
-        #d = TestData.objects.all()
-        #print(d)
+        # player = TestData(lastname="aaaaaa")
+        # player.firstname = 'ttttt'
+        # player.save()
+        # d = TestData.objects.all()
+        # print(d)
+        a = "testing"
         return HttpResponse(a)
     else:
         return HttpResponse("<h1>test</h1>")
 
 
+# 从api获取balance信息存入db
 def account_balance(request):
+    api_manager = ApiManager()
+    ab = api_manager._get_account_balance()
+    if ab is not None:
+        db_helper._insert_account_balance(ab)
+        pass
     pass
 
 
+# 从api获取交易记录信息存入db
 def trade_history(request):
+    api_manager = ApiManager()
+    th = api_manager._get_trade_history()
+    if th is not None:
+        db_helper._insert_trade_history(th)
+        pass
     pass
 
 
@@ -108,4 +120,3 @@ def transfer(request):
 
 def order(request):
     pass
-

@@ -1,8 +1,6 @@
 from django.db import models
 
 # Create your models here.
-
-# Create your models here.
 class User(models.Model):
     username = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
@@ -10,28 +8,21 @@ class User(models.Model):
     def __unicode__(self):
         return self.username
 
-class TestData(models.Model):
-    firstname = models.CharField(max_length=50)
-    lastname = models.CharField(max_length=50)
-
-    def __unicode__(self):
-        return self.lastname
-
-
-class AccountBalance(models.Model):
+class BithumbAccountBalance(models.Model):
     coin = models.CharField(max_length=50, primary_key=True) #币种
     in_use = models.FloatField(default=0) #使用中资产
     total = models.FloatField(default=0)#总资产
     misu = models.FloatField(default=0)
     available = models.FloatField(default=0) #可用资产
+    #xcoin_last = models.FloatField(default=0)
 
     def __unicode__(self):
         return self.coin
 
 
-class TradeHistory(models.Model):
+class BithumbTradeHistory(models.Model):
     transfer_date = models.DateTimeField(auto_now_add=False, primary_key=True) #时间戳
-    trade_coin = models.ForeignKey(to="AccountBalance", to_field='coin', null=False, blank=False, on_delete=models.CASCADE)  #币种
+    trade_coin = models.ForeignKey(to="BithumbAccountBalance", to_field='coin', null=False, blank=False, on_delete=models.CASCADE)  #币种
     exchange_rate = models.FloatField(default=0) #单笔交易兑换率
     trade_type = models.IntegerField(default=0) #交易类型
     trade_units = models.FloatField(default=0) #交易单位
