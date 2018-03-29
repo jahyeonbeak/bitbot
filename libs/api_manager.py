@@ -7,6 +7,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../../BitcoinMonitor/sc
 from bithumb.easy_api import EasyAPI
 import json
 from . import config
+#import config
 
 class ApiManager(object):
     '''
