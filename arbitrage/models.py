@@ -17,8 +17,9 @@ class TestData(models.Model):
     def __unicode__(self):
         return self.lastname
 
+
 class AccountBalance(models.Model):
-    coin = models.CharField(max_length=50) #币种
+    coin = models.CharField(max_length=50, primary_key=True) #币种
     in_use = models.FloatField(default=0) #使用中资产
     total = models.FloatField(default=0)#总资产
     misu = models.FloatField(default=0)
@@ -29,14 +30,15 @@ class AccountBalance(models.Model):
 
 
 class TradeHistory(models.Model):
-    transfer_date = models.DateTimeField(auto_now_add=False) #时间戳
-    exchange = models.FloatField(default=0) #使用中资产
-    type = models.IntegerField(default=0)
-    units = models.FloatField(default=0) #使用中资产
-    price = models.FloatField(default=0) #使用中资产
-    fee = models.FloatField(default=0) #使用中资产
-    coin_remain = models.FloatField(default=0) #使用中资产
-    krw_remain = models.FloatField(default=0) #使用中资产
+    transfer_date = models.DateTimeField(auto_now_add=False, primary_key=True) #时间戳
+    trade_coin = models.ForeignKey(to="AccountBalance", to_field='coin', null=False, blank=False, on_delete=models.CASCADE)  #币种
+    exchange_rate = models.FloatField(default=0) #单笔交易兑换率
+    trade_type = models.IntegerField(default=0) #交易类型
+    trade_units = models.FloatField(default=0) #交易单位
+    trade_price = models.FloatField(default=0) #交易价格
+    trade_fee = models.FloatField(default=0) #交易费率
+    coin_remain = models.FloatField(default=0) #剩余币数
+    krw_remain = models.FloatField(default=0) #剩余资产
 
     def __unicode__(self):
         return self.transfer_date

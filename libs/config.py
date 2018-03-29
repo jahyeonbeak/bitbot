@@ -4,5 +4,5 @@
 # author: jahyeonbeak@gmail.com
 # date:   2018-03-01
 
-BITHUMB_CONNECT_KEY = '' # 汇率基础
-BITHUMB_SECRET_KEY = ''
+BITHUMB_CONNECT_KEY = '' # Bithumb 公共key
+BITHUMB_SECRET_KEY = '' # Bithumb 私有key

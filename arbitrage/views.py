@@ -76,11 +76,11 @@ def interface_test(request):
 
 
         print(c)
-        player = TestData(lastname="aaaaaa")
-        player.firstname = 'ttttt'
-        player.save()
-        d = TestData.objects.all()
-        print(d)
+        #player = TestData(lastname="aaaaaa")
+        #player.firstname = 'ttttt'
+        #player.save()
+        #d = TestData.objects.all()
+        #print(d)
         return HttpResponse(a)
     else:
         return HttpResponse("<h1>test</h1>")

@@ -30,7 +30,7 @@ class ApiManager(object):
             resa = self.bithumb_api.get_account()
             print (resa)
             #账户余额
-            res = self.bithumb_api.get_balance(currency='BTC')
+            res = self.bithumb_api.get_balance(currency='ALL')
             print (res)
             res = self.bithumb_api.get_my_transactions()
             print(res)
