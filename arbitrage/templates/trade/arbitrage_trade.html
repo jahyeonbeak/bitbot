@@ -30,6 +30,43 @@
                 });
 
             });
+            var socket;
+
+        window.onload = function () {
+            var host = "ws://" + window.location.host + "/echo"
+            socket = new WebSocket(host);
+            try {
+
+                socket.onopen = function (msg) {
+
+                    alert("连接成功！");
+                };
+
+                socket.onmessage = function (msg) {
+                    if (typeof msg.data == "string") {
+                        alert(msg.data);
+                    }
+                    else {
+                        alert("非文本消息");
+                    }
+                };
+
+                socket.onclose = function (msg) { alert("socket closed!") };
+            }
+            catch (ex) {
+                log(ex);
+            }
+        }
+
+        window.onbeforeunload = function () {
+            try {
+                socket.close();
+                socket = null;
+            }
+            catch (ex) {
+            }
+        };
+
     </script>
     <div class="jumbotron">
         <h1>Mainpage</h1>
@@ -38,11 +75,17 @@
         {% csrf_token %}
         <button type="submit" id="submit" >提交</button>
         </form>
+    <button type="button" id="connect_websocket">连接 websocket</button>
+    <button type="button" id="close_websocket">关闭 websocket</button>
+    <div id="messagecontainer">
+
+</div>
     </div>
     <div id = "comm">
         <ul class = 'con' >测试结果</ul> </div>
 
     <p>chart</p>
+
 <table border="1">
   <tr>
     <th>hl</th>
@@ -57,4 +100,32 @@
     <input width="40"/>
     <button type="submit" id="trade" >提交</button>
     </form>
+
+    <style>
+    #leftdiv {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;
+}
+#rightdiv {
+    width:350px;
+    float:left;
+    padding:10px;
+}
+    </style>
+    <div id="leftdiv">
+    London<br>
+    </div>
+
+
+    <div id="rightdiv">
+    <h2>London</h2>
+    <p>
+    London is the capital city of England. It is the most populous city in the United Kingdom,
+    with a metropolitan area of over 13 million inhabitants.
+    </p>
+    </div>
 {% endblock %}

@@ -2,11 +2,14 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
 from django.views import View
+# Websocket
+
 from os import path
 import sys, os
 from .forms import UserRegistrationForm
 # 包装csrf请求，避免django认为其实跨站攻击脚本
 from django.views.decorators.csrf import csrf_exempt
+from dwebsocket import accept_websocket,require_websocket
 from .models import *
 # 数据库
 from .models import User
@@ -120,3 +123,18 @@ def transfer(request):
 
 def order(request):
     pass
+
+@accept_websocket
+def echo(request):
+    if not request.is_websocket():#判断是不是websocket连接
+        try:#如果是普通的http方法
+            message = request.GET['message']
+            return HttpResponse(message)
+        except:
+            return render(request,'index.html')
+    else:
+        print ('is socket')
+        #request.websocket.send('ttttttttttttt'.encode(encoding="utf-8"))
+        pass
+        #for message in request.websocket:
+        #   request.websocket.send(message)#发送消息到客户端

@@ -54,6 +54,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+MIDDLEWARE_CLASSES = [
+    'dwebsocket.middleware.WebSocketMiddleware',
+]
+
 ROOT_URLCONF = 'bitbot.urls'
 
 TEMPLATES = [
@@ -128,7 +132,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 
-#Auth
+# Auth
 LOGIN_REDIRECT_URL = reverse_lazy('test')
 LOGIN_URL = reverse_lazy('login')
 LOGOUT_URL = reverse_lazy('logout')
+
