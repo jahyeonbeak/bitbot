@@ -9,6 +9,7 @@ from arbitrage.models import *
 import datetime
 import threading
 import time
+from django.core import serializers
 
 
 class DBHelper(object):
@@ -17,8 +18,31 @@ class DBHelper(object):
 
     def __init__(self):
         self._isThreadRun = False
-        self._update_thread = threading.Thread(target=DBHelper._update_data)
-        #self._update_thread.start()
+        self.request = None
+        self._update_thread = threading.Thread(target=self._update_data)
+        self._update_thread.start()
+
+        self._query_agents = []
+        pass
+
+    def _set_request(self, request):
+        self.request = request
+        pass
+
+    def _append_query_list(self, action):
+        self._query_agents.append(action)
+        pass
+
+    def _query(self):
+        for agent in self._query_agents:
+            #logger.info('agent "%s"' % (agent.name))
+            # get price
+            #exchangedata = {'KRW': {'CNY': 0.0058398, 'USD': 0.00091961}, 'USD': {'CNY': 6.3503, 'KRW': 1087.4}, 'CNY': {'KRW': 171.24, 'USD': 0.15747}}
+            #agent.set_exchange(exchangedata)
+            ret = agent.query()
+            if not ret:
+                #logger.error('query failed, skip "%s"' % (agent.name))
+                continue
         pass
 
     @staticmethod
@@ -69,11 +93,13 @@ class DBHelper(object):
             item.save()
             pass
 
-    @staticmethod
-    def _update_data():
+    def _update_data(self):
         while True:
             data = BithumbTradeHistory.objects.all()
-            print(data)
+            json_data = serializers.serialize("json", data)
+            if self.request is not None:
+                self.request.websocket.send(json_data.encode(encoding="utf-8"))
+                pass
             time.sleep(5)
         pass
 
