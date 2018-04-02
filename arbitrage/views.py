@@ -75,7 +75,7 @@ def interface_test(request):
         #p = ApiManager()
         #a = p.query()
 
-        # account_balance(request)
+        account_balance(request)
         # trade_history(request)
 
         # player = TestData(lastname="aaaaaa")
@@ -131,9 +131,15 @@ def echo(request):
             message = request.GET['message']
             return HttpResponse(message)
         except:
-            return render(request,'index.html')
+            return render(request, 'index.html')
     else:
+        request.websocket.send('ttttttttttttt'.encode(encoding="utf-8"))
         print ('is socket')
+        for message in request.websocket:
+            print(message)
+            #if request.websocket is None:
+            #    break
+            request.websocket.send('ttttttttttttt'.encode(encoding="utf-8"))
         #request.websocket.send('ttttttttttttt'.encode(encoding="utf-8"))
         pass
         #for message in request.websocket:

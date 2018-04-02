@@ -7,6 +7,8 @@ import sys, os
 import json
 from arbitrage.models import *
 import datetime
+import threading
+import time
 
 
 class DBHelper(object):
@@ -14,6 +16,9 @@ class DBHelper(object):
     '''
 
     def __init__(self):
+        self._isThreadRun = False
+        self._update_thread = threading.Thread(target=DBHelper._update_data)
+        #self._update_thread.start()
         pass
 
     @staticmethod
@@ -63,5 +68,15 @@ class DBHelper(object):
                                 krw_remain=data['krw_remain'])
             item.save()
             pass
+
+    @staticmethod
+    def _update_data():
+        while True:
+            data = BithumbTradeHistory.objects.all()
+            print(data)
+            time.sleep(5)
+        pass
+
+
 
 db_helper = DBHelper()

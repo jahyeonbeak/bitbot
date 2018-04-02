@@ -30,42 +30,42 @@
                 });
 
             });
-            var socket;
 
-        window.onload = function () {
-            var host = "ws://" + window.location.host + "/echo"
-            socket = new WebSocket(host);
-            try {
 
-                socket.onopen = function (msg) {
-
-                    alert("连接成功！");
-                };
-
-                socket.onmessage = function (msg) {
-                    if (typeof msg.data == "string") {
-                        alert(msg.data);
-                    }
-                    else {
-                        alert("非文本消息");
-                    }
-                };
-
-                socket.onclose = function (msg) { alert("socket closed!") };
+        $(function () {
+        $('#connect_websocket').click(function () {
+            if (window.s) {
+                window.s.close()
             }
-            catch (ex) {
-                log(ex);
+            /*创建socket连接*/
+            var socket = new WebSocket("ws://" + window.location.host + "/echo/");
+            socket.onopen = function () {
+                console.log('WebSocket open');//成功连接上Websocket
+            };
+            socket.onmessage = function (e) {
+                console.log('message: ' + e.data);//打印出服务端返回过来的数据
+                //$('#messagecontainer').prepend('<p>' + e.data + '</p>');
+            };
+            // Call onopen directly if socket is already open
+            if (socket.readyState == WebSocket.OPEN) socket.onopen();
+            window.s = socket;
+        });
+        $('#send_message').click(function () {
+            //如果未连接到websocket
+            if (!window.s) {
+                alert("websocket未连接.");
+            } else {
+                window.s.send($('#message').val());//通过websocket发送数据
             }
-        }
+        });
+        $('#close_websocket').click(function () {
+            if (window.s) {
+                window.s.close();//关闭websocket
+                console.log('websocket已关闭');
+            }
+        });
 
-        window.onbeforeunload = function () {
-            try {
-                socket.close();
-                socket = null;
-            }
-            catch (ex) {
-            }
-        };
+    });
 
     </script>
     <div class="jumbotron">
@@ -75,8 +75,9 @@
         {% csrf_token %}
         <button type="submit" id="submit" >提交</button>
         </form>
-    <button type="button" id="connect_websocket">连接 websocket</button>
-    <button type="button" id="close_websocket">关闭 websocket</button>
+    <button type="button" id="connect_websocket">open websocket</button>
+        <button type="button" id="close_websocket">close websocket</button>
+        <button type="button" id="send_message">test websocket</button>
     <div id="messagecontainer">
 
 </div>
@@ -97,7 +98,7 @@
   </tr>
 </table>
     <form>
-    <input width="40"/>
+    <input id="message" width="40"/>
     <button type="submit" id="trade" >提交</button>
     </form>
 

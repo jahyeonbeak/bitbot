@@ -42,6 +42,6 @@ urlpatterns = [
     # test
     url(r'^test/$', views.mainpage, name='test'),
     url(r'interface_test/$', views.interface_test, name='interface_test'),
-url(r'^echo$', views.echo),
+    url(r'^echo/$', views.echo),
 
 ]
