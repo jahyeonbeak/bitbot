@@ -76,7 +76,7 @@ def interface_test(request):
         #a = p.query()
 
         account_balance(request)
-        # trade_history(request)
+        trade_history(request)
 
         # player = TestData(lastname="aaaaaa")
         # player.firstname = 'ttttt'

@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95d9c2e8-6817-48d3-8cd0-c5d06ef4d780" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/arbitrage/templates/trade/arbitrage_trade.html" afterPath="$PROJECT_DIR$/arbitrage/templates/trade/arbitrage_trade.html" />
-      <change beforePath="$PROJECT_DIR$/arbitrage/urls.py" afterPath="$PROJECT_DIR$/arbitrage/urls.py" />
       <change beforePath="$PROJECT_DIR$/arbitrage/views.py" afterPath="$PROJECT_DIR$/arbitrage/views.py" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/libs/db_helper.py" afterPath="$PROJECT_DIR$/libs/db_helper.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -90,8 +85,8 @@
           <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/arbitrage/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-737">
-                  <caret line="78" column="32" lean-forward="true" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
+                <state relative-caret-position="213">
+                  <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#57#0" expanded="true" />
                   </folding>
@@ -184,8 +179,8 @@
         <option value="$PROJECT_DIR$/bitbot/settings.py" />
         <option value="$PROJECT_DIR$/arbitrage/urls.py" />
         <option value="$PROJECT_DIR$/arbitrage/templates/trade/arbitrage_trade.html" />
-        <option value="$PROJECT_DIR$/arbitrage/views.py" />
         <option value="$PROJECT_DIR$/libs/db_helper.py" />
+        <option value="$PROJECT_DIR$/arbitrage/views.py" />
       </list>
     </option>
   </component>
@@ -732,8 +727,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/arbitrage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-737">
-          <caret line="78" column="32" lean-forward="true" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
+        <state relative-caret-position="213">
+          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
